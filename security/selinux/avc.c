@@ -349,8 +349,12 @@ static struct avc_xperms_decision_node
 	struct extended_perms_decision *xpd;
 
 	xpd_node = kmem_cache_zalloc(avc_xperms_decision_cachep,
+<<<<<<< HEAD
 			GFP_NOWAIT | __GFP_NOWARN);
 
+=======
+				     GFP_NOWAIT | __GFP_NOWARN);
+>>>>>>> 2bcb9e5b4650... Merge branch 'android-4.9-q' of https://android.googlesource.com/kernel/common into 10.0-caf
 	if (!xpd_node)
 		return NULL;
 
@@ -398,11 +402,15 @@ static struct avc_xperms_node *avc_xperms_alloc(void)
 	struct avc_xperms_node *xp_node;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	xp_node = kmem_cache_zalloc(avc_xperms_cachep,
 			GFP_NOWAIT | __GFP_NOWARN);
 =======
 	xp_node = kmem_cache_zalloc(avc_xperms_cachep, GFP_NOWAIT | __GFP_NOWARN);
 >>>>>>> 94570581ccff... Merge 4.9.276 into android-4.9-q
+=======
+	xp_node = kmem_cache_zalloc(avc_xperms_cachep, GFP_NOWAIT | __GFP_NOWARN);
+>>>>>>> 2bcb9e5b4650... Merge branch 'android-4.9-q' of https://android.googlesource.com/kernel/common into 10.0-caf
 	if (!xp_node)
 		return xp_node;
 	INIT_LIST_HEAD(&xp_node->xpd_head);
